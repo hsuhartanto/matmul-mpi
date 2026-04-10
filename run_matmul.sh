@@ -4,8 +4,8 @@
 #SBATCH -N 2
 #SBATCH --nodelist=node-06,node-08
 
-PROG=/home/user09/2026/UTS-NadiaRahmadinaAristawati/topik2a
-INFO="Nadia Rahmadina Aristawati - 2306207972"
+PROG=/home/user01/matmul
+INFO="my name and my IDs number"
 
 mpirun --mca btl_tcp_if_exclude docker0,lo -np 2 $PROG 1024 "$INFO"
 mpirun --mca btl_tcp_if_exclude docker0,lo -np 4 $PROG 1024 "$INFO"
